@@ -10,8 +10,7 @@
          beStrictAboutTodoAnnotatedTests="true"
          failOnRisky="true"
          failOnWarning="true"
-         colors="true"
-         verbose="true">
+         colors="true">
     <testsuites>
         <testsuite name="default">
             <directory>tests</directory>
