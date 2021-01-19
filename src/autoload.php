@@ -7,9 +7,10 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
+                'thephpcc\\greed\\d6' => '/D6.php',
                 'thephpcc\\greed\\exception' => '/exceptions/Exception.php',
                 'thephpcc\\greed\\greed' => '/Greed.php',
-                'thephpcc\\greed\\invaliddierollexception' => '/exceptions/InvalidDieRollException.php'
+                'thephpcc\\greed\\outofrangeexception' => '/exceptions/OutOfRangeException.php'
             );
         }
         $cn = strtolower($class);

@@ -3,6 +3,6 @@ namespace thephpcc\greed;
 
 use InvalidArgumentException;
 
-final class InvalidDieRollException extends InvalidArgumentException implements Exception
+final class OutOfRangeException extends InvalidArgumentException implements Exception
 {
 }
