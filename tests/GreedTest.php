@@ -25,6 +25,11 @@ final class GreedTest extends TestCase
         $this->assertSame(200, $this->greed()->score([new D6(2), new D6(2), new D6(2)]));
     }
 
+    public function test_Triple_3_scores_300(): void
+    {
+        $this->assertSame(300, $this->greed()->score([new D6(3), new D6(3), new D6(3)]));
+    }
+
     public function test_Double_1_scores_0(): void
     {
         $this->assertSame(0, $this->greed()->score([new D6(1), new D6(1)]));

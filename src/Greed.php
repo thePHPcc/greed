@@ -12,8 +12,9 @@ final class Greed
     {
         $score = 0;
 
-        $ones = 0;
-        $twos = 0;
+        $ones   = 0;
+        $twos   = 0;
+        $threes = 0;
 
         foreach ($dice as $die) {
             if ($die->asInt() === 1) {
@@ -22,6 +23,10 @@ final class Greed
 
             if ($die->asInt() === 2) {
                 $twos++;
+            }
+
+            if ($die->asInt() === 3) {
+                $threes++;
             }
         }
 
@@ -35,6 +40,10 @@ final class Greed
 
         if ($twos === 3) {
             $score += 200;
+        }
+
+        if ($threes === 3) {
+            $score += 300;
         }
 
         return $score;
