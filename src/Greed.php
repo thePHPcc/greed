@@ -22,6 +22,10 @@ final class Greed
             return 100;
         }
 
+        if ($ones === 3) {
+            return 1000;
+        }
+
         return 0;
     }
 }

@@ -10,12 +10,22 @@ use PHPUnit\Framework\TestCase;
  */
 final class GreedTest extends TestCase
 {
-    public function test_A_single_1_scores_100(): void
+    public function test_Single_1_scores_100(): void
     {
         $this->assertSame(100, $this->greed()->score([new D6(1)]));
     }
 
-    public function test_A_single_2_scores_0(): void
+    public function test_Triple_1_scores_1000(): void
+    {
+        $this->assertSame(1000, $this->greed()->score([new D6(1), new D6(1), new D6(1)]));
+    }
+
+    public function test_Double_1_scores_0(): void
+    {
+        $this->assertSame(0, $this->greed()->score([new D6(1), new D6(1)]));
+    }
+
+    public function test_Single_2_scores_0(): void
     {
         $this->assertSame(0, $this->greed()->score([new D6(2)]));
     }
