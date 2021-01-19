@@ -9,14 +9,7 @@ final class Greed
     public function score(array $dice): int
     {
         foreach ($dice as $die) {
-            if ($die > 6 || $die < 1) {
-                throw new InvalidDieRollException(
-                    sprintf(
-                        'A six-sided die cannot roll a %d',
-                        $die
-                    )
-                );
-            }
+            $this->ensureDieIsSixSided($die);
         }
 
         if ($dice === [1]) {
@@ -24,5 +17,20 @@ final class Greed
         }
 
         return 0;
+    }
+
+    /**
+     * @throws InvalidDieRollException
+     */
+    private function ensureDieIsSixSided(int $die): void
+    {
+        if ($die > 6 || $die < 1) {
+            throw new InvalidDieRollException(
+                sprintf(
+                    'A six-sided die cannot roll a %d',
+                    $die
+                )
+            );
+        }
     }
 }
