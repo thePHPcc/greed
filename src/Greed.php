@@ -4,11 +4,21 @@ namespace thephpcc\greed;
 final class Greed
 {
     /**
+     * @param D6[] $dice
+     *
      * @throws OutOfRangeException
      */
-    public function score(D6 $die): int
+    public function score(array $dice): int
     {
-        if ($die->asInt() === 1) {
+        $ones = 0;
+
+        foreach ($dice as $die) {
+            if ($die->asInt() === 1) {
+                $ones++;
+            }
+        }
+
+        if ($ones === 1) {
             return 100;
         }
 
