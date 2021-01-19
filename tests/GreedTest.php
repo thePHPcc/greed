@@ -1,7 +1,6 @@
 <?php declare(strict_types=1);
 namespace thephpcc\greed;
 
-use function sprintf;
 use PHPUnit\Framework\TestCase;
 
 /**
