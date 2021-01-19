@@ -10,22 +10,33 @@ final class Greed
      */
     public function score(array $dice): int
     {
+        $score = 0;
+
         $ones = 0;
+        $twos = 0;
 
         foreach ($dice as $die) {
             if ($die->asInt() === 1) {
                 $ones++;
             }
+
+            if ($die->asInt() === 2) {
+                $twos++;
+            }
         }
 
         if ($ones === 1) {
-            return 100;
+            $score += 100;
         }
 
         if ($ones === 3) {
-            return 1000;
+            $score += 1000;
         }
 
-        return 0;
+        if ($twos === 3) {
+            $score += 200;
+        }
+
+        return $score;
     }
 }
