@@ -8,6 +8,7 @@ spl_autoload_register(
         if ($classes === null) {
             $classes = array(
                 'thephpcc\\greed\\exception' => '/exceptions/Exception.php',
+                'thephpcc\\greed\\greed' => '/Greed.php',
                 'thephpcc\\greed\\invaliddierollexception' => '/exceptions/InvalidDieRollException.php'
             );
         }
