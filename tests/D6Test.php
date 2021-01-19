@@ -21,4 +21,11 @@ final class D6Test extends TestCase
 
         new D6(7);
     }
+
+    public function test_Can_have_one_pip(): void
+    {
+        $die = new D6(1);
+
+        $this->assertSame(1, $die->asInt());
+    }
 }

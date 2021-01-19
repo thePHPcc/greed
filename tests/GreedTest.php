@@ -5,6 +5,8 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \thephpcc\greed\Greed
+ *
+ * @uses \thephpcc\greed\D6
  */
 final class GreedTest extends TestCase
 {
