@@ -7,6 +7,8 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
+                'thephpcc\\greed\\exception' => '/exceptions/Exception.php',
+                'thephpcc\\greed\\invaliddierollexception' => '/exceptions/InvalidDieRollException.php'
             );
         }
         $cn = strtolower($class);
